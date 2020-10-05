@@ -179,7 +179,6 @@ describe 'hashketball' do
     end
 
   end
-
   describe '#big_shoe_rebounds' do
 
     it 'returns the number of rebounds of the player with the biggest shoe size' do

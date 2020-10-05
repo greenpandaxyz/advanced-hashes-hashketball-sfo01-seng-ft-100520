@@ -207,6 +207,7 @@ def player_stats(player_name)
     count1 = 0
     while count1 < team[:players].length
       player = team[:players][count1]
+   
       if player[:player_name] == player_name
         return player
       end
@@ -239,4 +240,25 @@ end
 def big_shoe_rebounds
   player = get_player_with_biggest_shoe_size()
   player[:rebounds]
+end
+
+
+def most_points_scored
+  count = 0
+  most_points = 0
+  player1 = nil
+  while count < game_hash.values.length
+  team = game_hash.values[count]
+  count2 = 0
+  while count2 < team[:players].length
+  player = team[:players][count2]
+  if player[:points] > most_points
+    most_points = player[:points]
+    player1 = player
+    end
+  count += 1
+  end
+count2 += 1
+  end
+return player1
 end
